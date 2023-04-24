@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PhotoEditor JS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <div class="img-box">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="upload">
+                <label for="upload">Upload</label>
+                <input type="file" id="upload">
+            </div>
+        </div>
+        <div class="filters">
+            <ul>
+                <li>
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" min="0" max="200" value="100">
+                    <!-- range to take a slide rectangle & min and max for the start and end range
+                    default value by vlaue  -->
+                </li>
+                <li>
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="brightness">Brigthness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="200" value="0">
+                </li>
+
+                <li>
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" id="grayscale" step="0.1" min="0" max="1" value="0">
+                    <!-- when min 0 and max 1 the line will go fast than another & and just one action
+                    step how many step in the single move like 0.1 they have 10 point to arrive the end  -->
+                </li>
+                <li>
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" step="0.1" min="0" max="10" value="0">
+                </li>
+
+                <li>
+                    <label for="hue-rotate">Hue-Rotate</label>
+                    <input type="range" id="hue-rotate" min="0" max="350" value="0">
+                </li>  
+                <li>
+                    <a download="true" id="download">Download</a>
+                    <span onclick="resetValue()">Reset</span>
+                </li>              
+            </ul>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
